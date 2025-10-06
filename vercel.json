@@ -1,0 +1,26 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|webp|svg|gif|mp4|webm|css|js|woff2|otf)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.6-fingers.org" }],
+      "destination": "https://6-fingers.org/$1",
+      "permanent": true
+    }
+  ]
+}

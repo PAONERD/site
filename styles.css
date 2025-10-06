@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'OneStrokeScript';
+  src: url('text/onestrokescriptrus_lat.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{
+  font-family:'OneStrokeScript',sans-serif;
+  background:#000;
+  display:flex;
+  justify-content:flex-start; /* fix */
+  align-items:center;
+  min-height:100vh;
+  background-image:url('images/site.svg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+
+
+.container {
+    text-align: left;
+    max-width: 1000px;
+    padding: 90px;
+}
+
+.twitter-link {
+    display: inline-flex;
+    text-decoration: none;
+    color: #1da1f2;
+    font-size: 1.2em;
+}
+
+.twitter-link img{
+  width:clamp(72px, 12vw, 130px);
+  height:auto;
+  margin-right:40px;
+}
+
+h1{
+  font-size:clamp(28px, 6vw, 50px); /* адаптивно */
+  line-height:1.05;
+  color:#eeb20d;
+}
+
+@media (max-width: 600px) {
+    .images {
+        flex-direction: column;
+    }
+    .images img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain;
+    }
+}
